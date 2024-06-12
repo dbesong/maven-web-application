@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/3.9.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/3.9.7 http://maven.apache.org/maven-v3_9_7.xsd">
-	<modelVersion>4.0.0</modelVersion>
+	<modelVersion>3.9.7</modelVersion>
 	<!-- build triggers -->
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
