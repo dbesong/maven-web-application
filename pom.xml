@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://54.237.75.88:8081/bascam/repository/jenkinsjobreleases/</url>
+	      <url>http://100.25.203.33:8081/bascam/repository/jenkinsjobreleases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://54.237.75.88:8081/bascam/repository/jenkinsjobsnapshots/</url>
+	      <url>http://100.25.203.33:8081/bascam/repository/jenkinsjobsnapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
