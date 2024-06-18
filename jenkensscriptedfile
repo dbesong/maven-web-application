@@ -15,7 +15,7 @@ node{
   }
   stage('5.deploy2UAT'){
     sh "echo deployment launched using deploy2container plugin"
-deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://54.152.168.210:8088/')], contextPath: null, war: 'target/*war'
+deploy adapters: [tomcat9(credentialsId: 'b480b3ee-5cc9-45ed-9f0e-36366e4c13f8', path: '', url: 'http://3.80.237.150:8080/')], contextPath: null, war: 'target/*war'
 
   }
  stage('6.ManualApproval'){
@@ -27,7 +27,7 @@ deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'h
  }
  stage('7.deploy2prod'){
     sh "echo deployment launched to production"
-deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://54.152.168.210:8088/')], contextPath: null, war: 'target/*war'
+deploy adapters: [tomcat9(credentialsId: 'b480b3ee-5cc9-45ed-9f0e-36366e4c13f8', path: '', url: 'http://3.80.237.150:8080')], contextPath: null, war: 'target/*war'
 
  }
 stage('8.apm'){
@@ -35,10 +35,8 @@ stage('8.apm'){
     sh "echo 'application performance Monitoring in progress' "
 }
   stage('9.notification'){
-        emailext body: '''The build and Deployment status for tesla-webapp.
 
-Regards,
-Landmark Technologies''', recipientProviders: [developers(), upstreamDevelopers(), buildUser()], subject: 'job status', to: 'mylandmarktech@gmail.com'
+emailext body: 'please review outcome of the test', recipientProviders: [contributor(), developers(), brokenBuildSuspects()], subject: 'Outcome of the test ran', to: 'dtbesong@yahoo.co.uk'
 
   }
 
