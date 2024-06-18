@@ -36,7 +36,9 @@ stage('8.apm'){
 }
   stage('9.notification'){
 
-emailext body: 'please review outcome of the test', recipientProviders: [contributor(), developers(), brokenBuildSuspects()], subject: 'Outcome of the test ran', to: 'dtbesong@yahoo.co.uk'
+emailext body: 'please review outcome of the test', 
+
+recipientProviders: [contributor(), developers(), brokenBuildSuspects()], subject: 'Outcome of the test ran', to: 'dtbesong@yahoo.co.uk'
 
   }
 
