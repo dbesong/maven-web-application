@@ -39,7 +39,7 @@ pipeline{
       steps{
         sh "echo Deployment is ready for the client review"
         sh "echo using deploy to container plugin" 
-        deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://172.31.30.76:8080/')], contextPath: null, war: 'target/*war'
+        deploy adapters: [tomcat9(credentialsId: 'b480b3ee-5cc9-45ed-9f0e-36366e4c13f8', path: '', url: 'http://3.80.237.150:8080/')], contextPath: null, war: 'target/*war'
 
       }
     }
@@ -56,7 +56,7 @@ pipeline{
     stage('7.Deploy2Prod'){
       steps{
         sh "echo application reviewed, approved and ready for the market" 
-        deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://172.31.30.76:8080/')], contextPath: null, war: 'target/*war'
+        deploy adapters: [tomcat9(credentialsId: 'b480b3ee-5cc9-45ed-9f0e-36366e4c13f8', path: '', url: 'http://3.80.237.150:8080/')], contextPath: null, war: 'target/*war'
 
       }
     }
