@@ -1,5 +1,5 @@
 node{
-  def mavenHome = tool name: 'maven3.9.7'
+  def mavenHome = tool name: 'maven3.9.9'
   stage('1.GitClone'){
    git "https://github.com/dbesong/maven-web-application"
 }
@@ -13,7 +13,7 @@ node{
     //sh "${mavenHome}/bin/mvn deploy"
     sh "echo The build and release job is ended"
   }
-  stage('5.deploy2UAT'){
+/*  stage('5.deploy2UAT'){
     sh "echo deployment launched using deploy2container plugin"
 deploy adapters: [tomcat9(credentialsId: 'b480b3ee-5cc9-45ed-9f0e-36366e4c13f8', path: '', url: 'http://3.80.237.150:8080/')], contextPath: null, war: 'target/*war'
 
@@ -40,6 +40,6 @@ emailext body: 'please review outcome of the test',
 
 recipientProviders: [contributor(), developers(), brokenBuildSuspects()], subject: 'Outcome of the test ran', to: 'dtbesong@yahoo.co.uk'
 
-  }
+  } */
 
 }
