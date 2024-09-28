@@ -35,7 +35,7 @@ pipeline{
           sh "echo Build and release completed"         
       }
     }
-    stage('5.Deploy2UAT'){
+   /*stage('5.Deploy2UAT'){
       steps{
         sh "echo Deployment is ready for the client review"
         sh "echo using deploy to container plugin" 
@@ -59,9 +59,9 @@ pipeline{
         deploy adapters: [tomcat9(credentialsId: 'b480b3ee-5cc9-45ed-9f0e-36366e4c13f8', path: '', url: 'http://3.80.237.150:8080/')], contextPath: null, war: 'target/*war'
 
       }
-    }
+    }  */
    }
-   post{
+/* post{
       always{
 emailext body: '''Hi Team,
 
@@ -90,6 +90,6 @@ Tel: +1 306 203 9181
 ''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build status', to: 'dtbesong@yahoo.co.uk'
 
       }
-   } 
+   } */
 
 }
